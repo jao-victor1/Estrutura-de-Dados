@@ -1,54 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#define ERRO -1
 
-#include "fracao.h"
-
-
-
-/*
-
-    fracao f;
-    int resto;
-    int mdc;
-    int dividendo_temp;
-    do {
-    if (f.Num % f.Den != 0){       ERRO
-
-    }
-
-    }while (resto == 0);
-}*/
+int PesquisaSequencial(int *V, int N, int Chave);
 
 int main()
-
 {
-    /*fracao f1 = criarfracao(30, 40);
-    f1 = SimplificarFracao(f1);
-    ExibirFracao(f1);
-    printf ("%d %d", f1.Num, f1.Den);
-    printf("%f\n", (float)f1.Num / f1.Den);
-
-
-   printf ("%d", calcularMDS(-30, 40))*/
-
-    /*fracao f5 = criarfracao(2, 4);
-    fracao f6 = criarfracao(4, 9);
-    fracao f7 = SomaFracao(f5, f6);
-    ExibirFracao(f7);
-    fracao f8 = criarfracao(5, 6);
-    fracao f9 = criarfracao(4, 9);
-    fracao f10 = SubtracaoFracao(f8, f9);
-    ExibirFracao(f10);*/
-
-    fracao f1 = criarfracao(3, 4);
-    fracao f2 = criarfracao(7, 9);
-    fracao f3 = criarfracao(5, 12);
-    fracao f4 = SubtracaoFracao(f1, f2);
-    fracao f5 = SomaFracao(f4, f3);
-    fracao f6 = SimplificarFracao(f5);
-    ExibirFracao(f6);
+    int Numeros[] = {14, 29, 37, 11, 43, 25, 19, 32, 16, 22,
+                     40, 13, 28, 35, 10, 45, 20, 38, 17, 24,
+                     30, 41, 15, 27, 33, 18, 26, 39, 12, 21};
+    int Tamanho = sizeof(Numeros) / sizeof(int); // definindo quantos itens tem no vetor, / bytes
+    int Elemento = 35;
+    int Posicao = PesquisaSequencial(Numeros, Tamanho, Elemento);
     return 0;
 }
 
-// fracao divindo numerador pelo denominador analisando o resto, caso seja diferente de 0, sera dividido o denominador pelo resto ate dar 0 no resto,
+
+
+int PesquisaSequencial(int *V, int N, int Chave)
+{
+    for (int i = 0; i < N; i++)
+    {
+        if (V[i] == Chave)
+        {
+            printf("O elemento chave foi encontrado na posicao %d.\n", i + 1);
+            return 1;
+        }
+    }
+    printf ("O elemento nao foi encontrado.\n");
+    return ERRO;
+}
