@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/joao.mlima/Desktop/Estrutura-de-Dados",
-      "program": "c:/Users/joao.mlima/Desktop/Estrutura-de-Dados/build/Debug/outDebug",
+      "cwd": "c:/Users/joao.mlima/Desktop/Estrutura-de-Dados/PesquisaSequencial",
+      "program": "c:/Users/joao.mlima/Desktop/Estrutura-de-Dados/PesquisaSequencial/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
