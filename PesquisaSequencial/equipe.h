@@ -20,5 +20,8 @@ typedef struct
 Time *LerDados(char *Arquivo);
 int getPontos(Time *T, int Posicao);
 float getAproveitamento(Time *T, char *Nome);
+void InsertionSort(Time *V, int N);
+
+
 
 #endif

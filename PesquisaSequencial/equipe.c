@@ -58,3 +58,20 @@ float getAproveitamento(Time *T, char *Nome)
     }
     return ERRO;
 }
+void InsertionSort(Time *V, int N){
+Time Chave;//quem sera incerido na parte ordenada
+int i; //posicao do elemento
+int j; // posicao do elemento da parte ordenada que sera comparada com chave
+
+for (i = 1; i < N; i++){
+    Chave = V[i];
+    j = i-1;
+
+    while ( j >= 0 && strcmp (V[j].Equipe, Chave.Equipe) > 0){
+        V[j+1] = V[j];
+        j--; //se j = -1, sera adicionado um na linha abaixo
+    } V[j+1] = Chave;
+
+}
+
+}
